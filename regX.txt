@@ -1,12 +1,11 @@
 resources -- http://gskinner.com/RegExr/
 
-matcher : 
+matcher: 
 	. --> any char but /n
 	\ --> escape char
 	? --> optional
 	() --> to group
 	  --> spaces are char
-
 
 character class: []
 
@@ -15,7 +14,28 @@ character class: []
 	* --> 0 or more
 	| --> or separate 
 
-carets and dollars 
+carets and dollars: 
 
 	^ --> match at beginning ( use multi-line )
-	$ --> end of line
+	$ --> end of sequence
+
+
+capture value: 
+
+	$1 --> capture first match ; $2 --> 2nd
+	?: --> not matching 
+
+greedy matches:
+
+	+? --> stop greediness for + sign
+
+range and curly brace
+
+	\d = digit 
+	\w = word
+	\n = new line
+	\s = space 
+	[a-z] = range 
+	{min,max} = number of time 
+
+[^abc] --> ^ is not in bracket.
