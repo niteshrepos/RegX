@@ -1,0 +1,21 @@
+resources -- http://gskinner.com/RegExr/
+
+matcher : 
+	. --> any char but /n
+	\ --> escape char
+	? --> optional
+	() --> to group
+	  --> spaces are char
+
+
+character class: []
+
+	[ae] --> match any of char class 
+	+ --> 1 and more
+	* --> 0 or more
+	| --> or separate 
+
+carets and dollars 
+
+	^ --> match at beginning ( use multi-line )
+	$ --> end of line
