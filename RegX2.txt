@@ -1,0 +1,53 @@
+-->
+	match what you want and only that 
+
+	literal char "cat"
+
+	meta character -->
+		wildcard = . 
+		escape =  \ (literal character never escaped)
+		\t,\n,r\
+
+	charset -->
+		[] = these are the only that can match 
+		- = only metachar if inside. needs start to end 
+			[50-99] no meaning 
+		^ = work as bang 
+		
+		metachar meaning lost there value inside charset
+		\d,\w,\s,\D,\W,\S just shorthand like \s = [\n\t\r]
+
+	repetition  -->
+
+		* 
+		+
+		?
+		{min=0,max=optional;,}
+		greedy expression (bydefault greddy and eager)
+		lazy expression ?
+		efficiency : 
+			-use + instead of * make it efficient even better {5}
+			-be as specific as possible
+
+
+			
+	grouping metachar:
+		
+		()
+		| (put the more efficient first because(abc|xyz) will match (xyz if comes first))
+
+	anchored expression 
+		^ = begin from start only 
+		$ = end of str only 
+		/b = word boundary --> really boost performance 
+		/B = not word boundary
+
+		bydefault single line mode
+		you need to turn on mutiline mode
+
+
+	capture group and back reference 	
+		remember data(not expression) inside ()
+		\1--\9 
+
+
