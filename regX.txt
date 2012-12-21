@@ -1,4 +1,6 @@
 resources -- http://gskinner.com/RegExr/
+-- finite state machine
+
 
 matcher: 
 	. --> any char but /n
@@ -39,3 +41,8 @@ range and curly brace
 	{min,max} = number of time 
 
 [^abc] --> ^ is not in bracket.
+
+look behind:
+	
+	(?<!) : look behind and if find don't select
+	(?<=) : look behind and if find  select
